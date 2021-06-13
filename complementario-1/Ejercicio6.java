@@ -1,10 +1,10 @@
-  
+
 import java.util.Scanner;
 public class Ejercicio6 {
- 
+
 //Se inicializa las variables y metodos
- public static void main(String[] args) {
-      int[] valores = pedirNumeros();
+public static void main(String[] args) {
+    int[] valores = pedirNumeros();
         int valor1 = valores[0];
         int valor2 = valores[1];
 
@@ -12,7 +12,7 @@ public class Ejercicio6 {
 }
 //Se pide el ingreso de dos numeros enteros.
 
- static int[] pedirNumeros(){
+static int[] pedirNumeros(){
     Scanner teclado= new Scanner(System.in);
     System.out.println("Ingrese 2 números enteros:");
     int numero1 = teclado.nextInt();
@@ -20,8 +20,8 @@ public class Ejercicio6 {
     teclado.close();
     int[] valores = {numero1, numero2};
     return valores;
- }
-   
+}
+
 // C Se alcula la potencia num1 elevado a num2
 static void potencia(int num1, int num2) {
     int resultado = num1;
@@ -32,12 +32,8 @@ static void potencia(int num1, int num2) {
     System.out.println(mensaje);
 }
 
-        
-    
-    
- }
+}
 
 
-    
- 
+
 

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class Ejercicio2 {
- public static void main(String[] args) {
+public static void main(String[] args) {
     
         int[] valores = pedirNumeros();
         int val1 = valores[0];
@@ -13,8 +13,8 @@ public class Ejercicio2 {
         multiplicacion(val1, val2);
         division(val1, val2);
         modulo(val1, val2);   
-     }
-     static int[] pedirNumeros() {
+    }
+    static int[] pedirNumeros() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingrese dos número enteros");
         int numero1 = sc.nextInt();
@@ -24,7 +24,7 @@ public class Ejercicio2 {
         return valores;
     }
      // Calcula la suma valor1 + valor2
-     static void suma(int val1, int val2) {
+    static void suma(int val1, int val2) {
         int resultado = val1 + val2;
         String mensaje = String.format("%d + %d = %d", val1, val2, resultado);
         System.out.println(mensaje);

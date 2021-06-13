@@ -1,53 +1,21 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
-
-public class Ejercicio5 {
+public class Ejercicio5{
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        List<Integer> horasTrabajadas = horasTrabajadas(sc);
-        List<Integer> valorHora = valorHora(sc);
-        List<Integer> totales = totales(horasTrabajadas, valorHora);
-        totalFinal(totales);
-        sc.close()
-        ;
-    }
-
-    static List<Integer> horasTrabajadas(Scanner sc) {
-        List<Integer> listaHoras = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            int cantidad = sc.nextInt();
-            listaHoras.add(cantidad);
+        Integer[] horas = {8, 12, 8, 16, 8};
+        Integer[] valorHora = {400, 450, 600, 670, 450};
+        Integer[] total = new Integer[5];
+        Integer totalFinal=0;
+        
+        for(int i= 0; i<horas.length; i++){
+            total[i] = horas[i] * valorHora[i];
+            totalFinal+= total[i];
         }
-        return listaHoras;
-    }
+        
+        
+        System.out.println( Arrays.toString(total));
+        System.out.println("Total final: $ " + totalFinal);
 
-    static List<Integer> valorHora(Scanner sc) {
-        List<Integer> listaValoes = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            int cantidad = sc.nextInt();
-            listaValoes.add(cantidad);
-        }
-        return listaValoes;
     }
-
-    static List<Integer> totales(List<Integer> horasTrabajadas, List<Integer> valorHora) {
-        List<Integer> listaTotales = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            int totalDia = horasTrabajadas.get(i) * valorHora.get(i);
-            listaTotales.add(totalDia);
-        }
-        System.out.println(listaTotales);
-        return listaTotales;
-    }
-
-    static int totalFinal(List<Integer> totales) {
-        int total = 0;
-        for (int valor : totales) {
-            total += valor;
-        }
-        System.out.println("Total Final: " + total);
-        return total;
-    }
+    
 }

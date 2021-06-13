@@ -4,11 +4,11 @@ public class Ejercicio1 {
       saludo();
     }  
     
-   static void saludo(){
+  static void saludo(){
     Scanner teclado=new Scanner(System.in);
     System.out.println("Ingrese su nombre:");
         String usuario= teclado.nextLine();
         teclado.close();
     System.out.print("Hola: " + usuario );
-   }
+  }
 }

@@ -1,43 +1,27 @@
 import java.util.ArrayList;
-import java.util.Scanner;
-
-
 
 public class Ejercicio2 {
-    public static void main (String [] args){
-        Scanner  teclado = new Scanner(System.in);
-        ArrayList<Integer> numeros =listaNumeros(teclado);
-        addInicio(teclado,numeros);
-        addFinal(teclado,numeros);
-        teclado.close();
-    }
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<>();
 
-    static ArrayList<Integer> listaNumeros(Scanner teclado) {
-        ArrayList<Integer> numeros = new ArrayList<Integer>();
-        for (int i=0; i<5; i++) {
-            System.out.println("************************************ ");
-            System.out.println("Ingrese un número entero a la lista :");
-            int numero = teclado.nextInt();
-            numeros.add(numero);
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4);
+        numbers.add(5);
+
+        System.out.println("Lista inicial");
+        System.out.println("Tamaño: " + numbers.size());
+        for (int i : numbers) {
+            System.out.println(i);
         }
-        return numeros;
-    }
 
-    static void addInicio(Scanner sc, ArrayList<Integer> numeros){
-        
-        System.out.println("Ingrese un numero al inicio de la lista : ");
-        int numero = sc.nextInt();
-        numeros.add(0,numero);
-        System.out.println("************************************ ");
-        System.out.println(numeros);
-     }
-
-    static void addFinal(Scanner sc, ArrayList<Integer> numeros){
-        System.out.println("Ingrese un numero al final de la lista : ");
-        int numero = sc.nextInt();
-        numeros.add(numero);
-        System.out.println("_________________________ ");
-        System.out.println("Esta es la lista completa : " +numeros);
-        System.out.println("-------------------------");
+        numbers.add(0, 0);
+        numbers.add(6);
+        System.out.println("Lista final con el agregado de un numero al princio y otro a l final :");
+        System.out.println("Tamaño: " + numbers.size());
+        for (int i : numbers) {
+            System.out.println(i);
+        }
     }
 }

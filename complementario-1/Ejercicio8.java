@@ -1,10 +1,11 @@
 import java.util.Scanner;
 public class Ejercicio8 {
-    public static void main(String[] args) {
-     datosPersonales();
+   public static void main(String[] args) {
+   datosPersonales();
 }
 static void datosPersonales(){
    Scanner teclado=new Scanner(System.in);
+   teclado.close();
    String NomAp,direccion,ciudad,edad;
    
    System.out.print("Ingresar Nombre y apellido:"); 
@@ -12,7 +13,7 @@ static void datosPersonales(){
    System.out.print("Edad:");
       edad=teclado.next();
    System.out.print("Ingresar direccion:");
-       teclado.nextLine();
+      teclado.nextLine();
       direccion=teclado.nextLine();
       
    System.out.print("Ingresar ciudad:");
@@ -21,5 +22,5 @@ static void datosPersonales(){
       String impresion = String.format("%s - %s - %s años - %s", ciudad, direccion, edad, NomAp);
       System.out.println(impresion);
 }
-    
+
 }

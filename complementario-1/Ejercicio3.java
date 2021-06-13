@@ -25,5 +25,5 @@ static void serie(int val) {
         System.out.println(valores);
     }
 
-  }
+}
 }

@@ -1,7 +1,7 @@
 
 public class Ejercicio4 {
     public static void main(String[] args){
-       factorial(5);
+    factorial(5);
 
 
     }
@@ -14,5 +14,5 @@ public class Ejercicio4 {
     String impresion = String.format("El factorial de %d es: %d", valor, resultado);
         System.out.println(impresion);
     
-  }
+}
 }
